@@ -10,6 +10,9 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
+app.use(express.static(path.join(__dirname, 'app/public')));
+app.use(express.static(path.join(__dirname, 'app/img')));
+
 require("./app/routing/htmlRoutes")(app);
 require("./app/routing/apiRoutes")(app);
 
