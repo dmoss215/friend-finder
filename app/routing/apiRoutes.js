@@ -49,7 +49,7 @@ module.exports = function (app) {
                 console.log(element[j]);
                 console.log(totalDif);
 
-                // find the exisiting friend with the lowest difference number
+                // See if the current friend from the friendData array score is lower than the current bestMatch score and replace best match if true
                 if (totalDif < bestMatch.scoreDif) {
                     bestMatch.name = friendData[i].name;
                     bestMatch.photo = friendData[i].photo;
